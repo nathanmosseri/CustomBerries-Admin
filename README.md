@@ -1,25 +1,4 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # CustomBerries-Admin
+
+CustomBerries-Admin is both the API/backend for the CustomBerries-Shop and the frontend admin page for Customberries to
+add products, accept and view orders, and view metrics.
