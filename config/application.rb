@@ -13,6 +13,9 @@ module CustomberriesAdmin
 
     require_relative 'initializers/cors'
 
+    config.session_store :cookie_store, key: 'customberries_session'
+
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

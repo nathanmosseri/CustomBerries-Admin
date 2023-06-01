@@ -5,6 +5,9 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     resource '/products',
       headers: :any,
       methods: [:get]
+    resource '/cart_items',
+      headers: :any,
+      methods: [:post]
   end
 
   allow do
