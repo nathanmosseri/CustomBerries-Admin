@@ -1,6 +1,6 @@
 class CartItemsController < ApplicationController
 
-    protect_from_forgery
+    # protect_from_forgery
 
     def index 
         cart_items = CartItem.all 
