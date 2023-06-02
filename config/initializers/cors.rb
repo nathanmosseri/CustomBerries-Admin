@@ -8,6 +8,9 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     resource '/cart_items',
       headers: :any,
       methods: [:post]
+    resource '/cart_items/:id',
+      headers: :any,
+      methods: [:delete]
     resource '/carts/:sess_id',
       headers: :any,
       methods: [:show]

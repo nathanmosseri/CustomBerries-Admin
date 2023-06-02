@@ -1,11 +1,6 @@
 class CartItemsController < ApplicationController
 
-    # protect_from_forgery
-
-    def index 
-        cart_items = CartItem.all 
-        render json: cart_items
-    end
+    protect_from_forgery
 
     def create 
         if Cart.find_by(sess_id: params[:sess_id])
@@ -20,6 +15,12 @@ class CartItemsController < ApplicationController
             c_i.update(quantity: c_i.quantity += params[:quantity].to_i)
         end
         render json: cart.cart_items, status: :created
+    end
+
+    def destroy
+        cart_item = CartItem.find(params[:id])
+        cart_item.destroy 
+        head :no_content
     end
 
 end

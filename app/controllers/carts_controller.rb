@@ -9,6 +9,7 @@ class CartsController < ApplicationController
             {
                 item: Product.find(p.product_id),
                 quantity: p.quantity,
+                cart_item: p.id
             }
         end
         render json: products
