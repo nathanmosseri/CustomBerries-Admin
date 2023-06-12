@@ -19,7 +19,11 @@ class CartItemsController < ApplicationController
 
     def destroy
         cart_item = CartItem.find(params[:id])
-        cart_item.destroy 
+        if cart_item.cart.cart_items.count <= 1
+            cart_item.cart.destroy
+        else
+            cart_item.destroy 
+        end
         head :no_content
     end
 
