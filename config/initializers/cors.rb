@@ -13,7 +13,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:delete]
     resource '/carts/:sess_id',
       headers: :any,
-      methods: [:show]
+      methods: [:show, :delete]
   end
 
   allow do
@@ -23,4 +23,5 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       :headers => :any,
       :methods => [:get, :post, :put, :patch, :delete, :options, :head]
   end
+  
 end

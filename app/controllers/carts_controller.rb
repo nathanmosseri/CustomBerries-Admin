@@ -15,6 +15,12 @@ class CartsController < ApplicationController
         render json: products
     end
 
+    def destroy
+        cart = Cart.find_by!(sess_id: params[:sess_id])
+        cart.destroy
+        head :no_content
+    end
+
     private 
 
     def cart_not_found(exception)
